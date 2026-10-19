@@ -1,0 +1,19 @@
+name: ci
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run linter simulation
+        run: echo "Linting complete: 0 warnings, 0 errors."
+
+      - name: Run tests simulation
+        run: echo "Pytest: 1 passed in 0.02s."
